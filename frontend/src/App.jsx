@@ -11,6 +11,8 @@ import Footer from './pages/Home/components/Footer'
 // import MeetingPage from '@/pages/Meeting/Meeting'
 import ChatInterface from './pages/Chat/ChatPage'
 import Doctors from './pages/DoctorList/Doctors'
+// import MeetingPage from './pages/Meeting/Meeting'
+// import Schedule from './pages/Meeting/page'
 
 
 // import About from '@/pages/About'
@@ -24,6 +26,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<HealthDashboard />} />
+        {/* <Route path="/conference" element={<MeetingPage />} /> */}
+        {/* <Route path="/schedule" element={<Schedule />} /> */}
+
  
         <Route path='/chat' element={<ChatInterface/>}/>
         <Route path="/doctor-list" element={<Doctors/>} />

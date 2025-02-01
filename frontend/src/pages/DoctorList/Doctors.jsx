@@ -9,19 +9,8 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import {
   Table,
@@ -35,37 +24,57 @@ import {
 const data = [
   {
     id: "d1",
-    name: "Dr. John Doe",
+    name: "Dr. Ananya Verma",
     specialization: "Cardiologist",
-    email: "johndoe@gmail.com",
+    email: "ananyaverma@gmail.com",
+    phone: "+91 98765 43210",
+    experience: "14 years",
+    location: "Mumbai",
+    address: "A-101, Hiranandani Towers, Powai, Mumbai",
     status: "Available",
   },
   {
     id: "d2",
-    name: "Dr. Sarah Smith",
+    name: "Dr. Rajesh Kumar",
     specialization: "Dermatologist",
-    email: "sarahsmith@yahoo.com",
+    email: "rajeshkumar@yahoo.com",
+    phone: "+91 87654 32109",
+    experience: "10 years",
+    location: "Delhi",
+    address: "45, Connaught Place, New Delhi",
     status: "On Leave",
   },
   {
     id: "d3",
-    name: "Dr. Emily Brown",
+    name: "Dr. Priya Sharma",
     specialization: "Neurologist",
-    email: "emilybrown@gmail.com",
+    email: "priyasharma@gmail.com",
+    phone: "+91 76543 21098",
+    experience: "12 years",
+    location: "Bangalore",
+    address: "12, MG Road, Indiranagar, Bangalore",
     status: "Available",
   },
   {
     id: "d4",
-    name: "Dr. Michael Johnson",
+    name: "Dr. Alok Mehta",
     specialization: "Orthopedic",
-    email: "michaelj@gmail.com",
+    email: "alokmehta@gmail.com",
+    phone: "+91 65432 10987",
+    experience: "18 years",
+    location: "Hyderabad",
+    address: "Greenwood Residency, Banjara Hills, Hyderabad",
     status: "Busy",
   },
   {
     id: "d5",
-    name: "Dr. William Lee",
+    name: "Dr. Sneha Patil",
     specialization: "Pediatrician",
-    email: "williamlee@hotmail.com",
+    email: "snehapatil@hotmail.com",
+    phone: "+91 54321 09876",
+    experience: "9 years",
+    location: "Chennai",
+    address: "Flat No. 7, Anna Nagar, Chennai",
     status: "Available",
   },
 ]
@@ -75,10 +84,7 @@ export const columns = [
     id: "select",
     header: ({ table }) => (
       <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
+        checked={table.getIsAllPageRowsSelected() || (table.getIsSomePageRowsSelected() && "indeterminate")}
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
       />
@@ -109,11 +115,29 @@ export const columns = [
     cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
   },
   {
+    accessorKey: "phone",
+    header: "Phone",
+    cell: ({ row }) => <div>{row.getValue("phone")}</div>,
+  },
+  {
+    accessorKey: "experience",
+    header: "Experience",
+    cell: ({ row }) => <div>{row.getValue("experience")}</div>,
+  },
+  {
+    accessorKey: "location",
+    header: "Location",
+    cell: ({ row }) => <div>{row.getValue("location")}</div>,
+  },
+  {
+    accessorKey: "address",
+    header: "Address",
+    cell: ({ row }) => <div>{row.getValue("address")}</div>,
+  },
+  {
     accessorKey: "status",
     header: "Status",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
-    ),
+    cell: ({ row }) => <div className="capitalize">{row.getValue("status")}</div>,
   },
 ]
 
@@ -144,18 +168,19 @@ function Doctors() {
 
   return (
     <div className="flex justify-center items-center mb-20 mt-9">
-      <div className="w-3/4">
+      <div className="w-full lg:w-3/4">
+        {/* Filter Input */}
         <div className="flex items-center py-4">
           <Input
             placeholder="Filter by name..."
             value={(table.getColumn("name")?.getFilterValue()) ?? ""}
-            onChange={(event) =>
-              table.getColumn("name")?.setFilterValue(event.target.value)
-            }
+            onChange={(event) => table.getColumn("name")?.setFilterValue(event.target.value)}
             className="max-w-sm"
           />
         </div>
-        <div className="rounded-md border">
+
+        {/* Table */}
+        <div className="rounded-md border overflow-x-auto">
           <Table>
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
@@ -164,10 +189,7 @@ function Doctors() {
                     <TableHead key={header.id}>
                       {header.isPlaceholder
                         ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                        : flexRender(header.column.columnDef.header, header.getContext())}
                     </TableHead>
                   ))}
                 </TableRow>
