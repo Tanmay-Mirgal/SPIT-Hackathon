@@ -8,7 +8,7 @@ import Schedule from '@/pages/Meeting/page'
 import Navbar from '@/pages/Home/components/Navbar'
 import MeetingPage from './pages/Meeting/Meeting'
 import Footer from './pages/Home/components/Footer'
-import MeetingPage from '@/pages/Meeting/Meeting'
+// import MeetingPage from '@/pages/Meeting/Meeting'
 import ChatInterface from './pages/Chat/ChatPage'
 import Doctors from './pages/DoctorList/Doctors'
 

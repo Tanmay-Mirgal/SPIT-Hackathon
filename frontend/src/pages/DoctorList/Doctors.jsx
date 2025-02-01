@@ -143,7 +143,7 @@ function Doctors() {
   })
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center mb-20 mt-9">
       <div className="w-3/4">
         <div className="flex items-center py-4">
           <Input
