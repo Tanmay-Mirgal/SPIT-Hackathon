@@ -42,10 +42,10 @@ const MedicalLanding = () => {
                 <Calendar className="w-5 h-5" />
                 Schedule an Appointment
               </button></Link>
-              <button className="flex items-center gap-2 px-6 py-3 border border-gray-200 rounded-full">
+              <Link to={"/chat"} className="flex items-center gap-2 px-6 py-3 border border-gray-200 rounded-full">
                 <MessageCircle className="w-5 h-5" />
                 Live Chat
-              </button>
+              </Link>
             </div>
           </div>
 
