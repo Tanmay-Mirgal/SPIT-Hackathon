@@ -74,9 +74,9 @@ const HealthDashboard = () => {
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-              <User className="w-4 h-4 text-gray-600" />
+            <img src="https://picsum.photos/512" className="w-full h-full object-cover rounded-full" alt="Avatar" />
             </div>
-            <span className="text-sm font-medium">Celeste T. Koch</span>
+            <span className="text-sm font-medium">Tanmay Mirgal</span>
           </div>
           <div className="flex space-x-2">
             <button className="hover:text-red-500 transition-colors">
@@ -91,8 +91,11 @@ const HealthDashboard = () => {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <span className="text-gray-400">Hi Celeste,</span>
-          <span className="text-gray-400">Welcome to AI-BL</span>
+          <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+            <img src="https://picsum.photos/512" className="w-full h-full object-cover" alt="Avatar" />
+          </div>
+          <span className="text-gray-400">Hi Tanmay Mirgal,</span>
+          <span className="text-gray-400">Welcome to Astra Health</span>
         </div>
       </div>
 

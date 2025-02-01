@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import loginImage from "../../../public/images/signup.png";
+import loginImage from "../../../public/images/signup2.png";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -13,11 +13,11 @@ const Signup = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-green-100 px-4">
+    <div className="h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="bg-white rounded-2xl shadow-lg flex flex-col md:flex-row w-full max-w-6xl overflow-hidden">
         {/* Left Side - Form */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-          <h2 className="text-4xl font-bold text-green-700 text-center mb-6">Welcome Back!</h2>
+          <h2 className="text-4xl font-bold text-green-700 text-center mb-6">Signup Now !!</h2>
           <p className="text-lg text-gray-600 text-center mb-6">Signup to continue your health journey</p>
 
           <form className="space-y-6" onSubmit={handleSubmit}>

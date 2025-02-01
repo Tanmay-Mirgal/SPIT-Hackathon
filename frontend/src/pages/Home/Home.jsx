@@ -1,34 +1,12 @@
 import React from 'react';
 import { ChevronRight, MessageCircle, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const MedicalLanding = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-blue-600"></div>
-            <span className="font-semibold">Medify</span>
-          </div>
-          <div className="flex gap-6">
-            <span>Home</span>
-            <span>Services</span>
-            <span>Doctors</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          <select className="bg-transparent">
-            <option>EN</option>
-            <option>HI</option>
-            <option>MR</option>
-            <option>GU</option>
-            <option>PA</option>
-          </select>
-          <button className="px-4 py-2">Login</button>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-full">Register</button>
-        </div>
-      </nav>
+      
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Hero Section */}
@@ -57,12 +35,12 @@ const MedicalLanding = () => {
 
             <h1 className="text-5xl font-bold leading-tight mb-8">
               Trusted Specialist<br />
-              for Every <span className="text-blue-600">Medical</span><br />
+              for Every <span className="text-[#818a60ff]">Medical</span><br />
               Need
             </h1>
 
             <div className="flex gap-4">
-              <button className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full">
+              <button className="flex items-center gap-2 px-6 py-3 bg-[#e3ff7dff] text-black rounded-full">
                 <Calendar className="w-5 h-5" />
                 Schedule an Appointment
               </button>
@@ -139,7 +117,7 @@ const MedicalLanding = () => {
           {/* Insight Card */}
           <div className="bg-white p-8 rounded-3xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-sm">INSIGHT</span>
+              <span className="bg-[#e3ff7dff] text-black px-4 py-1 rounded-full text-sm">INSIGHT</span>
               <span className="text-sm text-gray-500">30/11/2024</span>
             </div>
             <p className="text-xl font-medium mb-4">We are here to<br />support your health</p>
@@ -152,9 +130,9 @@ const MedicalLanding = () => {
           {/* Team Card */}
           <div className="bg-white p-8 rounded-3xl">
             <h2 className="text-2xl font-bold mb-6">
-              Our team of highly trained <span className="text-blue-600">medical</span> professionals is here to provide the best possible care.
+              Our team of highly trained <span className="text-[#818a60ff]">medical</span> professionals is here to provide the best possible care.
             </h2>
-            <button className="flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-600 rounded-full">
+            <button className="flex items-center gap-2 px-6 py-3 bg-[#e3ff7dff] text-black rounded-full">
               LEARN MORE
               <ChevronRight className="w-5 h-5" />
             </button>
