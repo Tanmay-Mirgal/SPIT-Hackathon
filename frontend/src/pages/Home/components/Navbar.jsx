@@ -8,7 +8,7 @@ function Navbar() {
       <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
-            <img src={logo} alt=""className='w-10 h-10 object-cover rounded-full' />
+          <Link to='/'> <img src={logo} alt=""className='w-10 h-10 object-cover rounded-full' /></Link>
             <span className="font-semibold">Astra</span>
           </div>
           <div className="flex gap-6">

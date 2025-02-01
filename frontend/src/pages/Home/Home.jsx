@@ -40,10 +40,10 @@ const MedicalLanding = () => {
             </h1>
 
             <div className="flex gap-4">
-              <button className="flex items-center gap-2 px-6 py-3 bg-[#e3ff7dff] text-black rounded-full">
+              <Link to='/schedule'><button className="flex items-center gap-2 px-6 py-3 bg-[#e3ff7dff] text-black rounded-full">
                 <Calendar className="w-5 h-5" />
                 Schedule an Appointment
-              </button>
+              </button></Link>
               <button className="flex items-center gap-2 px-6 py-3 border border-gray-200 rounded-full">
                 <MessageCircle className="w-5 h-5" />
                 Live Chat
