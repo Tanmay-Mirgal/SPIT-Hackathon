@@ -61,7 +61,7 @@ const HealthDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+      {/* <div className="flex justify-between items-center mb-8">
         <div className="flex items-center space-x-4">
           <div className="text-2xl font-bold">*</div>
           <div className="flex space-x-2">
@@ -97,7 +97,7 @@ const HealthDashboard = () => {
           <span className="text-gray-400">Hi Tanmay Mirgal,</span>
           <span className="text-gray-400">Welcome to Astra Health</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Title Section */}
       <div className="flex justify-between items-center mb-8">
