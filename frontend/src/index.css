@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @font-face {
+  font-family: 'Dune Rise';
+  src: url('./assets/Dune_Rise.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Dune Rise', sans-serif;
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
