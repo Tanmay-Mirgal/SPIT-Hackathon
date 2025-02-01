@@ -6,6 +6,7 @@ import Signup from '@/pages/Signup/Signup'
 import HealthDashboard from '@/pages/Dashboard/Dashboard'
 import Schedule from '@/pages/Meeting/page'
 import Navbar from '@/pages/Home/components/Navbar'
+import MeetingPage from './pages/Meeting/Meeting'
 // import About from '@/pages/About'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<HealthDashboard />} />
         <Route path="/schedule" element={<Schedule />} />
+        <Route path="/conference" element={<MeetingPage/>} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
       </>

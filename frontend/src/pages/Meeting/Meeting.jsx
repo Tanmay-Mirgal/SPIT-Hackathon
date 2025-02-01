@@ -9,10 +9,10 @@ const MeetingPage = () => {
 
   let myMeeting = async (element) => {
   
-    const appID = 1782856681;
-    const serverSecret = "eb8bd2443e9edd7ebe48136d6dbcd9b2";
+    const appID = import.meta.env.VITE_ZEGOCLOUD_APP_ID;
+    const serverSecret = import.meta.env.VITE_ZEGOCLOUD_SERVER_SECRET;
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
-      appID,
+      Number(appID),
       serverSecret,
       roomId,
       Date.now().toString(),

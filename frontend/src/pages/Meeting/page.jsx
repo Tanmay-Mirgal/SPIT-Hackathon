@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const Schedule = () => {
@@ -7,6 +8,7 @@ const Schedule = () => {
     roomId: "",
     role: "user",
   });
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,6 +18,7 @@ const Schedule = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted", formData);
+    navigate(`/conference/?username=${formData.username}&roomId=${formData.roomId}`);
     
     // Add logic to handle form submission
   };
