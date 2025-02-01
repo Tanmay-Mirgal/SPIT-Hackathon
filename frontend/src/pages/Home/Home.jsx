@@ -6,8 +6,6 @@ const MedicalLanding = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Navigation */}
-      
-
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="grid md:grid-cols-2 gap-12">
@@ -97,9 +95,12 @@ const MedicalLanding = () => {
           </div>
         </div>
 
+        {/* Features Section */}
+       
+
         {/* Stats Section */}
         <div className="grid grid-cols-4 gap-8 my-16">
-          {[
+          {[ 
             ['30M+', 'Global Users'],
             ['30%', 'USER Savings rate'],
             ['$100M', 'Capital raised'],
@@ -110,6 +111,32 @@ const MedicalLanding = () => {
               <p className="text-sm text-gray-600">{label}</p>
             </div>
           ))}
+        </div>
+        <div className="my-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">Our Key Features</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "One-to-One Video Call with Doctor", description: "Connect with doctors instantly via video calls.", icon: "video" },
+              { title: "AI Chatbot for Health Guidance", description: "Get personalized diet plans and exercise recommendations.", icon: "message-circle" },
+              { title: "24-Hour Support", description: "Round-the-clock assistance for any health concerns.", icon: "clock" },
+              { title: "User-Friendly Dashboard", description: "Track your progress, exercises, and diet plans.", icon: "bar-chart" },
+              { title: "Multilingual Platform", description: "Supports multiple languages for a global user base.", icon: "globe" },
+              { title: "Doctor Prescriptions", description: "Doctors can provide prescriptions for your treatment.", icon: "file" },
+              { title: "Expert Doctor Connections", description: "Get connected with highly skilled medical professionals.", icon: "user-check" },
+              { title: "Mobile App for Portable Use", description: "Access your medical information on the go.", icon: "smartphone" },
+              { title: "Live Chat with Doctors and Community", description: "Chat with doctors and people with similar health concerns.", icon: "message-square" }
+            ].map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-3xl shadow-lg">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-[#e3ff7dff] text-black rounded-full flex items-center justify-center">
+                    <i className={`lucide lucide-${feature.icon} w-6 h-6`} />
+                  </div>
+                  <h3 className="text-xl font-medium">{feature.title}</h3>
+                </div>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom Cards */}

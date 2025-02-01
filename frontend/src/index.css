@@ -3,7 +3,7 @@
 @tailwind utilities;
 /* @font-face {
   font-family: 'Dune Rise';
-  src: url('./assets/Dune_Rise.ttf') format('truetype');
+  src: url('./assets/') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

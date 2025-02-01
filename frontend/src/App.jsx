@@ -7,6 +7,7 @@ import HealthDashboard from '@/pages/Dashboard/Dashboard'
 import Schedule from '@/pages/Meeting/page'
 import Navbar from '@/pages/Home/components/Navbar'
 import MeetingPage from './pages/Meeting/Meeting'
+import Footer from './pages/Home/components/Footer'
 // import About from '@/pages/About'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/conference" element={<MeetingPage/>} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
+      <Footer/>
       </>
    
   )
