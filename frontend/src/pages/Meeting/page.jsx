@@ -16,6 +16,7 @@ const Schedule = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted", formData);
+    
     // Add logic to handle form submission
   };
 
