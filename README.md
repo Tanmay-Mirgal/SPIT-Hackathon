@@ -28,7 +28,7 @@
 - **MongoDB** – For storing user and doctor data.
 
 ### AI Features:
-- **TensorFlow.js** – For AI chatbot integration.
+- **Chatbase AI Agent** – For AI chatbot integration.
 - **WebRTC** – For video conferencing.
 
 ---
